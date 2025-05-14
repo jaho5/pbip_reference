@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "21171de3bd1806808b58",
+  "position": {
+    "x": -6,
+    "y": 763.88235294117658,
+    "z": 24000,
+    "height": 192,
+    "width": 192,
+    "tabOrder": 24000
+  },
+  "visual": {
+    "visualType": "multiRowCard",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_FIELD_ACTION"
+                    }
+                  },
+                  "Property": "Current Phase"
+                }
+              },
+              "queryRef": "VW_FIELD_ACTION.Current Phase",
+              "nativeQueryRef": "Current Phase"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_FIELD_ACTION"
+                    }
+                  },
+                  "Property": "Field Action Type"
+                }
+              },
+              "queryRef": "VW_FIELD_ACTION.Field Action Type",
+              "nativeQueryRef": "Field Action Type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "VW_FIELD_ACTION"
+                        }
+                      },
+                      "Property": "Field Action Number"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(VW_FIELD_ACTION.Field Action Number)",
+              "nativeQueryRef": "Field Action Number"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "VW_FIELD_ACTION"
+                  }
+                },
+                "Property": "Current Phase"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

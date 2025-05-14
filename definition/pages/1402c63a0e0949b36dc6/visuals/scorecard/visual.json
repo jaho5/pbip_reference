@@ -1,0 +1,70 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "scorecard",
+  "position": {
+    "x": 954,
+    "y": 955.88235294117692,
+    "z": 35000,
+    "height": 192,
+    "width": 192,
+    "tabOrder": 35000
+  },
+  "visual": {
+    "visualType": "scorecard",
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1fc82ca4d7230010688b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "VW_FIELD_ACTION"
+              }
+            },
+            "Property": "Current Phase"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "e273cccb19a62db14404",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "VW_FIELD_ACTION"
+              }
+            },
+            "Property": "Field Action Type"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "a42b859c7acec6756444",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "VW_FIELD_ACTION"
+                  }
+                },
+                "Property": "Field Action Number"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      }
+    ]
+  }
+}
