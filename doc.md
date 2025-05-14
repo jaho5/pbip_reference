@@ -67,6 +67,26 @@ Each `visual.json` file defines a specific visualization within a Power BI repor
   }
 }
 ```
+## Minimal Example
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.5.0/schema.json",
+  "name": "bb48f365d5de68a16a97",
+  "position": {
+    "x": 150,
+    "y": 70,
+    "z": 26002,
+    "height": 150,
+    "width": 300,
+    "tabOrder": 26002
+  },
+  "visual": {
+    "visualType": "barChart",
+    "drillFilterOtherVisuals": true
+  }
+}
+
+```
 
 ## Key Properties in visual.json
 
